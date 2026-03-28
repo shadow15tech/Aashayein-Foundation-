@@ -777,275 +777,193 @@ body {
 
 }
 /* ================================= */
-/* SDG SECTION */
+/* SDG SECTION - MODERN DESIGN */
 /* ================================= */
 
 .sdg-section{
-padding:90px 20px;
-background:#f5f5f5;
+    padding:90px 20px;
+    background:linear-gradient(135deg,#f7f9fb,#eef2f7);
 }
-
-/* Layout */
 
 .sdg-container{
-
-display:flex;
-
-align-items:center;
-
-gap:60px;
-
-max-width:1200px;
-
-margin:auto;
-
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:60px;
 }
 
-/* Left Title */
+/* LEFT TITLE */
 
 .sdg-left{
-flex:1;
+    flex:1;
 }
 
 .sdg-left h2{
-
-font-size:42px;
-
-font-weight:700;
-
-line-height:1.2;
-
-color:#333;
-
+    font-size:42px;
+    font-weight:700;
+    line-height:1.2;
+    color:#222;
 }
 
-/* Slider */
+/* SLIDER */
 
 .sdg-slider{
-
-position:relative;
-
-overflow:hidden;
-
-flex:2;
-
+    flex:2;
+    position:relative;
+    overflow:hidden;
 }
 
-/* Track */
+/* TRACK */
 
 .sdg-track{
-
-display:flex;
-
-gap:25px;
-
-transition:transform 0.5s ease;
-
+    display:flex;
+    gap:25px;
+    transition:transform 0.5s ease;
 }
 
-
-/* ================================= */
-/* SDG CARD */
-/* ================================= */
+/* CARD */
 
 .sdg-card{
-
-min-width:240px;
-
-height:150px;
-
-background:#ffffff;
-
-border-radius:10px;
-
-padding:20px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-
-transition:0.35s;
-
+    min-width:200px;
+    height:200px;
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    transition:all 0.4s ease;
 }
 
-/* Title */
+/* IMAGE */
 
-.sdg-card h3{
-
-font-size:18px;
-
-font-weight:600;
-
-margin-bottom:8px;
-
-color:#4c9843;
-
+.sdg-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.5s ease;
 }
 
-/* Description */
+/* OVERLAY */
 
-.sdg-card p{
-
-font-size:14px;
-
-color:#555;
-
-line-height:1.5;
-
+.sdg-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:15px;
+    background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color:#fff;
 }
 
+.sdg-overlay h3{
+    font-size:16px;
+    font-weight:600;
+}
 
-/* Hover */
+/* HOVER EFFECT */
 
 .sdg-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 18px 35px rgba(0,0,0,0.15);
-
+    transform:translateY(-8px) scale(1.05);
 }
 
+.sdg-card:hover img{
+    transform:scale(1.1);
+}
 
-/* ================================= */
-/* Buttons */
-/* ================================= */
+/* BUTTONS */
 
 .sdg-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#000;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    z-index:2;
+    opacity:0.7;
+    transition:0.3s;
+}
 
-position:absolute;
-
-top:50%;
-
-transform:translateY(-50%);
-
-background:#4c9843;
-
-color:#fff;
-
-border:none;
-
-width:38px;
-
-height:38px;
-
-cursor:pointer;
-
-z-index:2;
-
-border-radius:50%;
-
-font-size:18px;
-
+.sdg-btn:hover{
+    opacity:1;
+    background:#f26522;
 }
 
 .prev{
-left:-18px;
+    left:-15px;
 }
 
 .next{
-right:-18px;
+    right:-15px;
 }
 
 
 /* ================================= */
-/* TABLET RESPONSIVE */
+/* TABLET */
 /* ================================= */
 
 @media(max-width:992px){
 
-.sdg-container{
+    .sdg-container{
+        flex-direction:column;
+        text-align:center;
+    }
 
-flex-direction:column;
+    .sdg-left h2{
+        font-size:34px;
+    }
 
-text-align:center;
-
-gap:40px;
-
+    .sdg-slider{
+        width:100%;
+    }
 }
 
-.sdg-left h2{
-
-font-size:34px;
-
-}
-
-.sdg-slider{
-
-width:100%;
-
-}
-
-}
 
 /* ================================= */
-/* MOBILE RESPONSIVE */
-/* SDG SECTION - donate.html */
+/* MOBILE */
 /* ================================= */
 
 @media(max-width:600px){
 
-.sdg-section{
-padding:60px 15px;
-}
+    .sdg-section{
+        padding:60px 15px;
+    }
 
-.sdg-left h2{
-font-size:28px;
-line-height:1.3;
-}
+    .sdg-left h2{
+        font-size:26px;
+    }
 
-/* Slider adjustments */
+    .sdg-track{
+        gap:15px;
+    }
 
-.sdg-slider{
-width:100%;
-overflow-x:auto;
-scroll-behavior:smooth;
-}
+    .sdg-card{
+        min-width:140px;
+        height:140px;
+    }
 
-/* Hide arrows on mobile */
+    .sdg-overlay h3{
+        font-size:13px;
+    }
 
-.sdg-btn{
-display:none;
-}
+    .sdg-btn{
+        display:none;
+    }
 
-/* Track scrollable */
+    .sdg-slider{
+        overflow-x:auto;
+        scroll-behavior:smooth;
+    }
 
-.sdg-track{
-gap:15px;
-padding-bottom:10px;
-}
-
-/* SQUARE CARD */
-
-.sdg-card{
-
-min-width:160px;
-
-height:160px;
-
-padding:15px;
-
-flex-shrink:0;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-text-align:center;
-
-}
-
-/* Hide scrollbar */
-
-.sdg-slider::-webkit-scrollbar{
-display:none;
-}
-
+    .sdg-slider::-webkit-scrollbar{
+        display:none;
+    }
 }
 /* ================================= */
 /* PROGRAMS SECTION */
@@ -2058,7 +1976,59 @@ font-size:14px;
 border-top:1px solid #333;
 
 }
+/* ================================= */
+/* FOOTER BOTTOM */
+/* ================================= */
 
+.footer-bottom{
+
+background:#111;
+
+color:#aaa;
+
+text-align:center;
+
+padding:18px 10px;
+
+font-size:14px;
+
+}
+
+/* Developer Text */
+
+.dev-text{
+
+margin-left:8px;
+
+color:#fff;
+
+font-weight:500;
+
+}
+
+/* Link */
+
+.dev-text a{
+
+color:#4c9843;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+/* Hover Effect */
+
+.dev-text a:hover{
+
+color:#f26522;
+
+text-decoration:underline;
+
+}
 
 /* ================= TABLET ================= */
 
