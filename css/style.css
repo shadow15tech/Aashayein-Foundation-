@@ -1982,9 +1982,9 @@ border-top:1px solid #333;
 
 .footer-bottom{
 
-background:#111;
+background:#050d12;
 
-color:#aaa;
+color:#fff;
 
 text-align:center;
 
@@ -1998,7 +1998,7 @@ font-size:14px;
 
 .dev-text{
 
-margin-left:8px;
+margin-left:18px;
 
 color:#fff;
 
@@ -2010,11 +2010,11 @@ font-weight:500;
 
 .dev-text a{
 
-color:#4c9843;
+color:#e4ee27;
 
 text-decoration:none;
 
-font-weight:600;
+font-weight:700;
 
 transition:0.3s;
 
@@ -2024,7 +2024,7 @@ transition:0.3s;
 
 .dev-text a:hover{
 
-color:#f26522;
+color:#f4e14f;
 
 text-decoration:underline;
 
@@ -3566,7 +3566,7 @@ position:relative;
 
 height:85vh;
 
-background:url("../images/donation\ image.jpg") center/cover no-repeat;
+background:url("../images/donation\ image.png") center/cover no-repeat;
 
 display:flex;
 
