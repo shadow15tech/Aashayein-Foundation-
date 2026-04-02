@@ -3840,7 +3840,7 @@ opacity:0.9;
 
 .qr-wrapper img{
 
-width:160px;
+width:360px;
 
 background:white;
 
@@ -3887,7 +3887,7 @@ font-size:28px;
 
 .qr-wrapper img{
 
-width:130px;
+width:230px;
 
 }
 
@@ -3923,20 +3923,15 @@ gap:35px;
 
 /* CARD */
 
-.donate-card{
-
-background:#ffffff;
-
-padding:35px;
-
-border-radius:10px;
-
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
-
-transition:0.35s;
-
-position:relative;
-
+.donate-card{ background:#ffffff; padding:35px;
+     border-radius:10px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08); 
+     transition:0.35s;
+      position:relative;
+      -webkit-border-radius:10px; 
+     -moz-border-radius:10px;
+      -ms-border-radius:10px;
+      -o-border-radius:10px;
 }
 
 
